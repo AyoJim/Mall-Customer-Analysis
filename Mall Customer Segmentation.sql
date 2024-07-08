@@ -77,6 +77,16 @@ SELECT *
 FROM public."Mall_Customers"
 WHERE "Gender" LIKE '%Female%';
 
+--Show the number of male customers
+SELECT COUNT("Gender")
+FROM public."Mall_Customers"
+WHERE "Gender" LIKE '%Male%';
+
+--Show the number of female customers
+SELECT COUNT("Gender")
+FROM public."Mall_Customers"
+WHERE "Gender" LIKE '%Female%';
+
 --Maximium income for male customers
 SELECT MAX("Annual Income ($)") 
 FROM public."Mall_Customers"
@@ -110,6 +120,16 @@ FROM public."Mall_Customers"
 WHERE "Gender" LIKE '%Female%'
 ORDER BY "Annual Income ($)" DESC
 LIMIT 1;
+
+--Total income for all male customers
+SELECT SUM("Annual Income ($)")
+FROM public."Mall_Customers"
+WHERE "Gender" LIKE '%Male%';
+
+--Total income for all female customers
+SELECT SUM("Annual Income ($)")
+FROM public."Mall_Customers"
+WHERE "Gender" LIKE '%Female%';
 
 --Average income for all female customers
 SELECT AVG("Annual Income ($)") 
