@@ -1,3 +1,4 @@
+
 --Select all the data from the table
 SELECT * 
 FROM public."Mall_Customers"
